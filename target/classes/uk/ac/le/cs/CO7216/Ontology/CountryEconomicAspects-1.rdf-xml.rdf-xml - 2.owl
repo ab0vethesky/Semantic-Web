@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/CountryEconomicAspects.owl#"
+     xml:base="http://www.owl-ontologies.com/CountryEconomicAspects.owl"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl">
+        <rdfs:comment xml:lang="en">&lt;p style=&quot;margin-top: 0&quot;&gt;
+      Country Economic Aspects Ontology
+    &lt;/p&gt;</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#contains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#has">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#has_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#has_a">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Partner"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#uses">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#capitalCity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#capitalCity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#countryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#countryName">
+        <owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#partnerName"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#gdpUSDValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#gdpUSDValue">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#languageName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#languageName">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arabic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portugese</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#partnerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#partnerName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#has_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#uses"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System_4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#capitalCity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">&lt;p style=&quot;margin-top: 0&quot;&gt;
+      Geographic Country
+    &lt;/p&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Government_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Presidential_Democracy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Dictactorship -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Dictactorship">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Government_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Military_Dictactorship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Religious_Dictatorship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Group"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Government_Type -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Government_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Group -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Group">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monarchy -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monarchy">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Government_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Ceremonial_Monarchy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#is_a"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Constitutional_Monarch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Partner -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Partner"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Percent -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Percent">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Value -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Value">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Ceremonial_Monarchy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Ceremonial_Monarchy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monarchy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Constitutional_Monarch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Constitutional_Monarch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monarchy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic_6">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block_1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block_19">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_Block"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System_4">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#ExchangeRate_Regime_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#ExchangeRate_Regime_5"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#ExportPartner1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#ExportPartner1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_10">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uganda</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_11">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanzania</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_8">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_9">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Floating_Forex -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Floating_Forex"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Free_Market -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Free_Market">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Value"/>
+        <gdpUSDValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">574.0</gdpUSDValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_Percent_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_Percent_1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Yearly_GDP_Percent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_16">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_17">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region_2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Geographic_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#ImportPartner1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#ImportPartner1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_10">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U.S.A</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_12">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_13">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_8">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner"/>
+        <partnerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</partnerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Kenya -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Kenya">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_10"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_11"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_12"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_13"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Key_Sector_14"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic_6"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System_4"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#ExchangeRate_Regime_5"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monetary_System_7"/>
+        <uses rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_18"/>
+        <capitalCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nairobi</capitalCity>
+        <countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic of Kenya</countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_1"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_2"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Key_Sector_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Key_Sector_14"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Military_Dictactorship -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Military_Dictactorship">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Dictactorship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monetary_System_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Monetary_System_7"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Nigeria -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Nigeria">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Country"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_7"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Export_Partner_9"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Floating_Forex"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_10"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Import_Partner_8"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_1"/>
+        <has rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#KeySector_2"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_1"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#GDP_Percent_1"/>
+        <has_a rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Presidential_Democracy"/>
+        <uses rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_3"/>
+        <capitalCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abuja</capitalCity>
+        <countryName xml:lang="en">Federal Republic of Nigeria</countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_18">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language"/>
+        <languageName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language_3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Official_Language"/>
+        <languageName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Parlimentary_Democracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Parlimentary_Democracy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Pegged_Forex -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Pegged_Forex"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Presidential_Democracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Presidential_Democracy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Democratic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Regulated_Economy -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Regulated_Economy">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Economic_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CountryEconomicAspects.owl#Religious_Dictatorship -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Religious_Dictatorship">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CountryEconomicAspects.owl#Dictactorship"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
